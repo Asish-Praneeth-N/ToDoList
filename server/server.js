@@ -20,7 +20,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.get("/",(req,res)=>{
-res,send("Hellow");
+res.send("Hellow");
 })
 app.post('/schedule-task', (req, res) => {
   const { email, task, dateTime } = req.body;
