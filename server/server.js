@@ -23,7 +23,7 @@ app.get("/",(req,res)=>{
 res.send("Hellow");
 })
 app.post('/schedule-task', (req, res) => {
-  const { email, task, dateTime } = req.body;
+  //const { email, task, dateTime } = req.body;
   console.log(email+" "+task+" "+dateTime);
   const scheduledDate = new Date(dateTime);
   if (isNaN(scheduledDate.getTime())) {
@@ -32,7 +32,7 @@ app.post('/schedule-task', (req, res) => {
 
  
   const cronSchedule = `${scheduledDate.getMinutes()} ${scheduledDate.getHours()} ${scheduledDate.getDate()} ${scheduledDate.getMonth() + 1} *`;
-
+  console.log(cronSchedule);
   cron.schedule(cronSchedule, () => {
     const mailOptions = {
       from: {
