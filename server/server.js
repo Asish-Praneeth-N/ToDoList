@@ -24,7 +24,7 @@ res.send("Hellow");
 })
 app.post('/schedule-task', (req, res) => {
   const { email, task, dateTime } = req.body;
-
+  console.log(email+" "+task+" "+dateTime);
   const scheduledDate = new Date(dateTime);
   if (isNaN(scheduledDate.getTime())) {
     return res.status(400).send({ message: 'Invalid dateTime format' });
