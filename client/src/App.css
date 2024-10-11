@@ -1,0 +1,77 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1e1e2f; 
+}
+
+h1 {
+  color: #ffffff; 
+  margin-bottom: 20px;
+}
+
+.task-form {
+  background: rgba(42, 42, 58, 0.7);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  width: 450px; 
+  transition: transform 0.2s;
+}
+
+.task-form:hover {
+  transform: scale(1.02); 
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #ffffff; 
+}
+
+
+.form-group input {
+  width: calc(100% - 20px); 
+  padding: 10px; 
+  border: 1px solid rgba(255, 255, 255, 0.3); 
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: rgba(58, 58, 77, 0.8);
+  color: #ffffff; 
+  box-sizing: border-box; 
+}
+
+.form-group input::placeholder {
+  color: #aaa; 
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 10px;
+  background-color: #007BFF;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+  transform: scale(1.05); 
+}
+
+p {
+  margin-top: 20px;
+  color: #3dff3d;
+  font-size: 16px;
+}
