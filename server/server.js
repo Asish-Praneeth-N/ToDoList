@@ -47,6 +47,7 @@ app.post('/schedule-task', (req, res) => {
 
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
+        console.log("Getting error");
         console.error('Failed to send email:', error);
       } else {
         console.log('Email sent:', info.response);
