@@ -11,7 +11,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('https://todolist-olzo.onrender.com', {
+      const response = await axios.post('https://todolist-olzo.onrender.com/schedule-task', {
         email,
         task,
         dateTime,
